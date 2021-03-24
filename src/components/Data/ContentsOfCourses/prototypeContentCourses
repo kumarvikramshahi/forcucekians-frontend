@@ -1,0 +1,30 @@
+import React from "react"
+import styles from "./contentCourses.module.css"
+
+export default function _____() {
+    return (
+        <div className={styles.div}>
+            <h1 className={styles.h1}>_____</h1>
+            <div className={styles.lecturesCard}>
+                <h2 className={styles.h2}>Free resources of lectures - </h2>
+                <ol className={styles.ol}>
+                    <li>_______li>
+                    <li>_______</li>
+                    <li>_______</li>
+                </ol>
+            </div>
+            <div className={styles.applicationCard}>
+             <h2 className={styles.h2}>Application - </h2>
+             <i><b>Note:</b> you will learn more either by  googling yourselves or exploring the topic yourselves you can't learn as much from others experience as you learn from yours.</i>
+             <h3 className={styles.h3}>_______</h3>
+             <p>___________</p>
+             <h3 className={styles.h3}>_______</h3>
+             <p>___________</p>
+             <h3 className={styles.h3}>_____</h3>
+             <p>___________</p>
+             <h3 className={styles.h3}>_______</h3>
+             <p>___________</p>
+            </div>
+        </div>
+    )
+}

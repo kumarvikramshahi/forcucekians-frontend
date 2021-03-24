@@ -1,0 +1,69 @@
+.blogs{
+    margin-top: -26px;
+    font-size: 125%;
+}
+@media only screen and (min-width: 800.5px){
+    .blogsParent{
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+    }
+}
+@media only screen and (max-width: 800.5px){
+    .addLeft{
+        display: none;
+    }
+}
+.middleSection{
+    text-align: center;
+}
+.h1{
+    font-size: 250%;
+    color: rgb(2, 81, 92);
+    animation: h2 5s infinite;
+    -moz-animation: h2 5s infinite;
+    -webkit-animation: h2 5s infinite;
+    -o-animation: h2 5s infinite;
+}
+@keyframes h2{
+    0%{color: rgb(2, 81, 92);}
+    20%{color: red;}
+    40%{color: green;}
+    60%{color: rgb(204, 99, 117);}
+    80%{color: black;}
+    100%{color: rgb(238, 84, 238);}
+}
+.cardContainer{
+    margin: 3%;
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: box-shadow 0.5s;
+    -moz-transition: box-shadow 0.5s;
+    -o-transition: box-shadow 0.5s;
+    -webkit-transition: box-shadow 0.5s;
+}
+.cardContainer:hover{
+    box-shadow: 0px 0px 10px rgba(18, 71, 107, 0.603);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.image{
+    width: 100%;
+}
+.cardLinks{
+    color: grey;
+    padding: 0px 2px 0px 5px;
+}
+.cardLinks:hover{
+color: rgba(69, 69, 236, 0.61);
+}
+.cardText{
+    display: inline-block;
+    padding: 4px 2px 4px 5px;
+    margin: 0px;
+}
+.blogsComponent{
+    margin-top: 5%;
+    padding: 12px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+}

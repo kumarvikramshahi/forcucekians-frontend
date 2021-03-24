@@ -1,0 +1,14 @@
+html{scroll-behavior: smooth;}
+@font-face{
+  font-family: chakraPetch;
+  src: url(./fonts/ChakraPetch-Regular.ttf);
+}
+@font-face{
+  font-family: orbitron;
+  src: url(./fonts/Orbitron-SemiBold.ttf);
+}
+body{
+  margin: -26px 0px;
+  font-family: chakraPetch;
+  width: 100%;
+}

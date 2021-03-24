@@ -1,0 +1,66 @@
+.divContainerNotes{
+    text-align: center;
+    width: 95%;
+    margin: 1px auto;
+}
+.divContainerQue{
+    text-align: center;
+    width: 95%;
+    margin: 1px auto;
+}
+.divChild{
+    overflow: auto;
+    margin: 2px 0px;
+    border: 1px solid black;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 8px;
+}
+.aStyle{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    padding: 5px;
+}
+.aStyle:hover{
+    background-color: rgba(176, 196, 222, 0.3);
+}
+.h2{
+    border: 1px solid black;
+    border-bottom: none;
+    padding: 5px 0px 0px 0px;
+    border-radius: 8px;
+}
+.sideBarHome{
+    display: block;
+    padding: 8px 6px 8px 12px;
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(22, 22, 22);
+}
+.sideBarHome:hover{
+    background-color: rgba(241, 178, 241, 0.7);
+}
+.sideBarHomeActive{
+    background-color: white;
+}
+@media only screen and (min-width: 800.5px){
+    .homeParent{
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+    }
+    .switchTag{
+        margin-top: -10px;
+    }
+}
+@media only screen and (max-width: 800.5px){
+    .switchTag{
+        margin-top: -25px;
+    }
+}
+.home{
+    margin-top: -21.5px;
+    font-size: 125%;
+    line-height: 1.5;
+}
