@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/forcucekians.github.io/static/css/main.95818dc6.chunk.css",
-    "main.js": "/forcucekians.github.io/static/js/main.78fcf8fc.chunk.js",
-    "main.js.map": "/forcucekians.github.io/static/js/main.78fcf8fc.chunk.js.map",
-    "runtime-main.js": "/forcucekians.github.io/static/js/runtime-main.15ebb01e.js",
-    "runtime-main.js.map": "/forcucekians.github.io/static/js/runtime-main.15ebb01e.js.map",
-    "static/js/2.a52a7b39.chunk.js": "/forcucekians.github.io/static/js/2.a52a7b39.chunk.js",
-    "static/js/2.a52a7b39.chunk.js.map": "/forcucekians.github.io/static/js/2.a52a7b39.chunk.js.map",
-    "index.html": "/forcucekians.github.io/index.html",
-    "static/css/main.95818dc6.chunk.css.map": "/forcucekians.github.io/static/css/main.95818dc6.chunk.css.map",
-    "static/js/2.a52a7b39.chunk.js.LICENSE.txt": "/forcucekians.github.io/static/js/2.a52a7b39.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/forcucekians.github.io/static/media/Orbitron-SemiBold.f79b4b4c.ttf"
+    "main.css": "/static/css/main.089ebea2.chunk.css",
+    "main.js": "/static/js/main.78fcf8fc.chunk.js",
+    "main.js.map": "/static/js/main.78fcf8fc.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0b3bb3e1.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0b3bb3e1.js.map",
+    "static/js/2.a52a7b39.chunk.js": "/static/js/2.a52a7b39.chunk.js",
+    "static/js/2.a52a7b39.chunk.js.map": "/static/js/2.a52a7b39.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.089ebea2.chunk.css.map": "/static/css/main.089ebea2.chunk.css.map",
+    "static/js/2.a52a7b39.chunk.js.LICENSE.txt": "/static/js/2.a52a7b39.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/Orbitron-SemiBold.f79b4b4c.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.15ebb01e.js",
+    "static/js/runtime-main.0b3bb3e1.js",
     "static/js/2.a52a7b39.chunk.js",
-    "static/css/main.95818dc6.chunk.css",
+    "static/css/main.089ebea2.chunk.css",
     "static/js/main.78fcf8fc.chunk.js"
   ]
 }
