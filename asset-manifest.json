@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.089ebea2.chunk.css",
-    "main.js": "/static/js/main.78fcf8fc.chunk.js",
-    "main.js.map": "/static/js/main.78fcf8fc.chunk.js.map",
+    "main.css": "/static/css/main.72d505d1.chunk.css",
+    "main.js": "/static/js/main.cf07cd17.chunk.js",
+    "main.js.map": "/static/js/main.cf07cd17.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0b3bb3e1.js",
     "runtime-main.js.map": "/static/js/runtime-main.0b3bb3e1.js.map",
     "static/js/2.a52a7b39.chunk.js": "/static/js/2.a52a7b39.chunk.js",
     "static/js/2.a52a7b39.chunk.js.map": "/static/js/2.a52a7b39.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.089ebea2.chunk.css.map": "/static/css/main.089ebea2.chunk.css.map",
+    "static/css/main.72d505d1.chunk.css.map": "/static/css/main.72d505d1.chunk.css.map",
     "static/js/2.a52a7b39.chunk.js.LICENSE.txt": "/static/js/2.a52a7b39.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/Orbitron-SemiBold.f79b4b4c.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.0b3bb3e1.js",
     "static/js/2.a52a7b39.chunk.js",
-    "static/css/main.089ebea2.chunk.css",
-    "static/js/main.78fcf8fc.chunk.js"
+    "static/css/main.72d505d1.chunk.css",
+    "static/js/main.cf07cd17.chunk.js"
   ]
 }
