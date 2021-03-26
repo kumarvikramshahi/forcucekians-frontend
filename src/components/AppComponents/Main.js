@@ -1,5 +1,5 @@
 import React from "react"
-import {BrowserRouter, Switch, Route } from "react-router-dom"
+import {Switch, Route } from "react-router-dom"
 import DownBar from "../MainComponents/DownBar"
 import Error from "../CommonToAll/Error"
 import Home from "../MainComponents/Home/Home"
@@ -12,7 +12,7 @@ import Blogs from "../MainComponents/Blogs/Blogs"
 export default class Main extends React.Component {
   render() {
     return (
-      <BrowserRouter>
+      <>
         <DownBar />
         <Switch>
           <Route path="/" component={Home} exact />
@@ -22,7 +22,7 @@ export default class Main extends React.Component {
           <Route path="/blogs" component={Blogs}/>
           <Route component={Error} />
         </Switch>
-      </BrowserRouter>
+      </>
     )
   }
 }
