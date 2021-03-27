@@ -8,20 +8,20 @@
     font-size: 125%;
     margin-top: -21.5px;
     padding: 0px 0px 50px 0px;
-    background-color: #5cdb935d;
+    background-color: #93caca9c;
 }
 .searchBar{
     text-align: center;
-    box-shadow: 5px 5px 20px #5cdb94,-5px -5px 20px #5cdb94;
+    box-shadow: 5px 5px 20px #00b1b1,-5px -5px 20px #00b1b1;
     border-radius: 20px;
     margin: 40px 20px;
     padding: 1px;
-    background-color: #5cdb93c7;
+    background-color: rgba(255, 192, 203, 0.6);
     animation: searchBar 4s 1;
 }
 @keyframes searchBar{
-    from{background-color: #6ecf9825;box-shadow: none;border-radius: 0px;margin: 0px;}
-    to{background-color: #5cdb93c7;box-shadow: 5px 5px 20px #5cdb94,-5px -5px 20px #5cdb94;border-radius: 20px;margin: 40px 20px;}
+    from{background-color: rgba(255, 192, 203, 0.2);box-shadow: none;border-radius: 0px;margin: 0px;}
+    to{background-color: rgba(255, 192, 203, 0.5);box-shadow: 5px 5px 20px #00b1b1,-5px -5px 20px #00b1b1;border-radius: 20px;margin: 40px 20px;}
 }
 .h2{
     color: rgba(0, 0, 0, 0.74);
