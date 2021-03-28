@@ -7,7 +7,7 @@ export default function ToTop() {
         right: "10px",
         bottom: "20%",
         transform: "translateX(170%)",
-        cursor:"pointer"
+        cursor: "pointer"
     }
     window.onscroll = function () {
         let toTopBtn = document.getElementById('ToTopBtn')

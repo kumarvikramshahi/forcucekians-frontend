@@ -24,7 +24,7 @@ export default function Competitive() {
                     <Switch>
                         <Route exact path="/competitive" component={SitesForFreeCourses} />
                         <Route exact path={`${url}/sitesForFreeCourses`} component={SitesForFreeCourses} />
-                        <Route exact path={`${url}/sitesForPaidCourses`} component={SitesForPaidCourses} />
+                        <Route path={`${url}/sitesForPaidCourses`} component={SitesForPaidCourses} />
                         <Route exact path={`${url}/sitesForProgrammers`} component={SitesForProgrammers} />
                         <Route exact path={`${url}/openSourceSoftware`} component={FOSS} />
                         <Route exact path={`${url}/openSourcePrograms`} component={FossPrograms} />

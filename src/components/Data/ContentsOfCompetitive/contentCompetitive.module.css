@@ -46,3 +46,10 @@ td, th {
         word-break: break-all;
     }
 }
+.activeNavLink{
+    color: green;
+    text-decoration: none;
+}
+.navLink{
+    color: grey;
+}
