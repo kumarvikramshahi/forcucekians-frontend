@@ -6,7 +6,8 @@ export default function ToTop() {
         position: "fixed",
         right: "10px",
         bottom: "20%",
-        transform: "translateX(170%)"
+        transform: "translateX(170%)",
+        cursor:"pointer"
     }
     window.onscroll = function () {
         let toTopBtn = document.getElementById('ToTopBtn')
@@ -38,6 +39,6 @@ export default function ToTop() {
         }
     }
     return (
-        <a style={style} href="#logo" id="ToTopBtn"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path d="M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm17-1h-4v8h-2v-8h-4l5-6 5 6z" /></svg></a>
+        <span onClick={() => window.scrollTo(0, 0)} style={style} id="ToTopBtn"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path d="M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm17-1h-4v8h-2v-8h-4l5-6 5 6z" /></svg></span>
     )
 }
