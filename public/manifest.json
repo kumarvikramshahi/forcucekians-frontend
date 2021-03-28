@@ -1,0 +1,8 @@
+{
+  "short_name": "forcucekians App",
+  "name": "forcucekians",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#d3f7f7",
+  "background_color": "#ffffff"
+}
