@@ -1,17 +1,17 @@
 const commonSubjects = [
     {
         name: "basic electrical communication 2",
-        subject: "BEC Module_2 by Jasmin",
+        subject: "BEC Module_2 by Jasmin mam",
         link: "https://www.jiocloud.com/s/?t=bYekGAClOVewHJYJ&s=a6"
     },
     {
         name: "basic electrical communication 3",
-        subject: "BEC Module_3 by Jasmin",
+        subject: "BEC Module_3 by Jasmin mam",
         link: "https://www.jiocloud.com/s/?t=GnsbzCERBOqfRZVL&s=a6"
     },
     {
         name: "basic electrical communication 4",
-        subject: "BEC Module_4 by Jasmin",
+        subject: "BEC Module_4 by Jasmin mam",
         link: "https://www.jiocloud.com/s/?t=jZAWWQsLczszbHen&s=a6"
     },
     {
@@ -27,7 +27,7 @@ const commonSubjects = [
     {
         name:"Computer Programming module 1 & 2 ",
         subject:"CP module 1 & 2",
-        link:"https://www.jiocloud.com/s/?t=cdxhAVYsQKpJJLTv&s=a6D"
+        link:"https://www.jiocloud.com/s/?t=CkPNrnhjIbXunDlu&s=a6"
     },
     {
         name:"Computer Programming module 3",
@@ -58,6 +58,21 @@ const commonSubjects = [
         name:"Calculas module 4",
         subject:"Calculas module 4",
         link:"https://www.jiocloud.com/s/?t=sncUeYCUYTmrBdnE&s=a6"
+    },
+    {
+        name:"Engineering chemistry by Asaletha mam",
+        subject:"Spectroscopy chemistry",
+        link:"https://www.jiocloud.com/s/?t=sGfBOgcrEZmkRWzl&s=a6"
+    },
+    {
+        name:"Engineering chemistry by Asaletha mam",
+        subject:"Quantum chemistry",
+        link:"https://www.jiocloud.com/s/?t=SVouqHgqIriTyxVV&s=a6"
+    },
+    {
+        name:"Complex Variables and Partial Differential Equations",
+        subject:"Complex Variables & Partial Differential Equations module 3 by Raju sir",
+        link:"https://www.jiocloud.com/s/?t=xkmJTbFFdPamqiBc&s=a6"
     }
 ]
 export default commonSubjects

@@ -13,20 +13,28 @@ import JavaScript from "../../Data/ContentsOfCourses/JavaScript"
 
 export default function Courses() {
     let { url } = useRouteMatch()
-    const list = CoursesSideBarList.map(
-        listItem => <NavLink activeClassName={styles.sideBarCoursesActive} className={styles.sideBarCourses} key={listItem.href} to={`${url}/${listItem.href}`}> {listItem.name} </NavLink>
+    const list = CoursesSideBarList.map(listItem =>
+        <NavLink
+            activeClassName={styles.sideBarCoursesActive}
+            className={styles.sideBarCourses}
+            key={listItem.href}
+            to={`${url}/${listItem.href}`} >
+            {listItem.name}
+        </NavLink>
     )
     return (
         <div className={styles.courses}>
             <div className={styles.coursesParent}>
-                <div><SideBar list={list} /></div>
+                <div>
+                    <SideBar list={list} />
+                </div>
                 <main className={styles.switchTag}>
                     <Switch>
                         <Route exact path="/courses" component={C_Cpp} />
                         <Route exact path={`${url}/c_cpp`} component={C_Cpp} />
                         <Route exact path={`${url}/java`} component={Java} />
-                        <Route exact path={`${url}/html_css`} component={Html_Css}/>
-                        <Route exact path={`${url}/javaScript`} component={JavaScript}/>
+                        <Route exact path={`${url}/html_css`} component={Html_Css} />
+                        <Route exact path={`${url}/javaScript`} component={JavaScript} />
                         <Route exact component={Error} />
                     </Switch>
                 </main>

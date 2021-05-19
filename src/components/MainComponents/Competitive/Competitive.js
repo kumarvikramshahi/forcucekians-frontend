@@ -15,11 +15,21 @@ import CompetitiveCoding from "../../Data/ContentsOfCompetitive/CompetitiveCodin
 
 export default function Competitive() {
     let { url } = useRouteMatch()
-    const list = CompetitiveSideBarList.map(listItem => <NavLink activeClassName={styles.sideBarCompetitiveActive} className={styles.sideBarCompetitive} key={listItem.path} to={`${url}/${listItem.path}`}> {listItem.name} </NavLink>)
+    const list = CompetitiveSideBarList.map(
+        listItem =>
+            <NavLink
+                activeClassName={styles.sideBarCompetitiveActive}
+                className={styles.sideBarCompetitive}
+                key={listItem.path}
+                to={`${url}/${listItem.path}`} >
+                {listItem.name}
+            </NavLink>)
     return (
         <div className={styles.competitive}>
             <div className={styles.competitiveParent}>
-                <div><SideBar list={list} /></div>
+                <div>
+                    <SideBar list={list} />
+                </div>
                 <main>
                     <Switch>
                         <Route exact path="/competitive" component={SitesForFreeCourses} />

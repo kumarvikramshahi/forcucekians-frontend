@@ -11,7 +11,7 @@
 }
 .childDiv{
     cursor:pointer;
-    background: linear-gradient(18deg,#e9e9e9, rgba(255, 192, 203, 0.700));
+    background: linear-gradient(18deg,#9e9e9e8e, rgba(255, 192, 203, 0.322));
     color:black;
     padding:13px 0px;
     text-decoration: none;
@@ -20,7 +20,7 @@
     background: linear-gradient(18deg,#e9e9e9, rgba(255, 192, 203, 0.322));
 }
 .childDivActive{
-    background: rgba(255, 255, 255, 0);
+    background: #e7e7e7de;
     border-bottom: 3px solid rgb(127, 141, 219);
 }
 .childSpan{

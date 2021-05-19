@@ -1,5 +1,5 @@
 .h1{
-background: linear-gradient(141.05deg, #dcdcdc 22.35%, rgba(255, 255, 255, 0) 119.99%);
+background: linear-gradient(141.05deg, #bddede 22.35%, #e7e7e7 119.99%);
 background-blend-mode: darken;
 font-family: orbitron;
 font-style: normal;
@@ -11,7 +11,4 @@ text-align: center;
 font-feature-settings: 'salt' on;
 padding: 10px 15px;
 z-index: 2;
-}
-.h1:hover{
-    background: linear-gradient(141.05deg, #dcdcdcce 22.35%, rgba(255, 255, 255, 0) 109.99%);
 }

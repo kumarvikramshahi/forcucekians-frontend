@@ -13,12 +13,21 @@ import styles from "./Materials.module.css"
 export default function Materials() {
     let { url } = useRouteMatch();
     const list = MaterialsSideBarList.map(
-        listItem => <NavLink activeClassName={styles.sideBarHomeActive} className={styles.sideBarHome} key={listItem.href} to={`${url}/${listItem.href}`}>{listItem.name} </NavLink>
+        listItem =>
+            <NavLink
+                activeClassName={styles.sideBarHomeActive}
+                className={styles.sideBarHome}
+                key={listItem.href}
+                to={`${url}/${listItem.href}`} >
+                {listItem.name}
+            </NavLink>
     )
     return (
         <div className={styles.home}>
             <div className={styles.homeParent}>
-                <div><SideBar list={list} /></div>
+                <div>
+                    <SideBar list={list} />
+                </div>
                 <main className={styles.switchTag}>
                     <Switch>
                         <Route path="/materials" component={Notes} exact />
