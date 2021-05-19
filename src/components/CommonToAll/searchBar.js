@@ -42,7 +42,7 @@ export default class Searchbar extends React.Component {
     render() {
         const input = {
             width: "80%",
-            height: "37px",
+            height: "40px",
             border: "1px solid rgb(0,0,0,0.5)",
             borderRadius: "5px",
             padding: "0px 0px 0px 10px",
