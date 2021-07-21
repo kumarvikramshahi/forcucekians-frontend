@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import "./Materials.css"
 import PopupMessage from "../../CommonToAll/popupMessage/popupMessage";
-// import commonSubjects from "../../Data/Notes/commonSubjectsNotes"
 
 export default function Books() {
     const [booksLink, setBooksLink] = useState(null)
