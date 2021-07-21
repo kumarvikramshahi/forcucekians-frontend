@@ -1,32 +1,35 @@
-.competitive{
+.competitive {
     margin-top: -21.5px;
-    font-size: 125%;
-    line-height: 1.5;
 }
-@media only screen and (min-width: 800.5px){
-    .competitiveParent{
+
+@media only screen and (min-width: 800.5px) {
+    .competitiveParent {
         display: grid;
         grid-template-columns: 17% 68% 15%;
     }
-    .switchTag{
+    .switchTag {
         margin-top: -10px;
     }
 }
-@media only screen and (max-width: 800.5px){
-    .switchTag{
+
+@media only screen and (max-width: 800.5px) {
+    .switchTag {
         margin-top: -25px;
     }
 }
-.sideBarCompetitive{
+
+.sideBarCompetitive {
     display: block;
     padding: 8px 6px 8px 12px;
     text-decoration: none;
     font-weight: 600;
     color: rgb(22, 22, 22);
 }
-.sideBarCompetitive:hover{
+
+.sideBarCompetitive:hover {
     background-color: rgba(241, 178, 241, 0.7);
 }
-.sideBarCompetitiveActive{
+
+.sideBarCompetitiveActive {
     background-color: #e7e7e7de;
 }

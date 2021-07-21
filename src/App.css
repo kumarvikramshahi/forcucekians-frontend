@@ -1,0 +1,56 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: chakraPetch;
+  src: url(./fonts/ChakraPetch-Regular.ttf);
+}
+
+@font-face {
+  font-family: orbitron;
+  src: url(./fonts/Orbitron-SemiBold.ttf);
+}
+
+body {
+  margin: -26px 0px;
+  font-family: chakraPetch;
+  font-size: 120%;
+  line-height: 1.5;
+  width: 100%;
+  background-color: #bddede;
+}
+
+@media only screen and (min-width: 1250.5px) {
+  body {
+    background-image: url('./assets/reading-side.svg'), url('./assets/reading-right.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: left 94%, right 94%;
+    background-size: 200px 200px, 200px 200px;
+  }
+}
+
+@media only screen and (max-width: 1250.5px) {
+  body {
+    background-color: #bddede;
+    /* fallback for old browsers */
+    background: linear-gradient(60deg, #4ca1af, #d9d2d3, #66b6c281, #c2baba, #6fadb8, #c4e0e5);
+    background: -webkit-linear-gradient(60deg, #4ca1af, #d9d2d3, #66b6c281, #eaeaea, #c4e0e5);
+    background-attachment: fixed;
+    background-repeat: no-repeat, no-repeat;
+  }
+}
+
+/* These are common css styles that is used in many components. */
+
+.glassmorphism {
+  backdrop-filter: blur( 5px);
+  -webkit-backdrop-filter: blur( 5px);
+}
+
+.card {
+  border-radius: 5px;
+  background: rgba( 255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+}

@@ -1,0 +1,11 @@
+.aStyle {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.aStyle:hover {
+    background-color: rgba(176, 196, 222, 0.3);
+}

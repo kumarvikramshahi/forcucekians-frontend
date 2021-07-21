@@ -1,0 +1,15 @@
+.button {
+    display: block;
+    padding: 6px 10px;
+    margin: 10px 0px 0px 2px;
+    background-color: #a0c5dd;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 25px 0px 25px 25px;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.363);
+    cursor: pointer;
+    font: inherit;
+}
+
+.button:disabled {
+    cursor: not-allowed;
+}

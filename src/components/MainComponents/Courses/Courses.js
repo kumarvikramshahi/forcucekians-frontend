@@ -1,11 +1,11 @@
 import React from "react"
 import { Switch, Route, NavLink, useRouteMatch } from "react-router-dom"
+
+import "./Courses.css"
 import SideBar from "../../CommonToAll/SideBar"
 import CoursesSideBarList from "../../Data/SideBarList/CoursesSideBarList"
 import Add from "../../CommonToAll/Add"
-import ToTop from "../../CommonToAll/ToTop"
 import Error from "../../CommonToAll/Error"
-import styles from "./Courses.module.css"
 import C_Cpp from "../../Data/ContentsOfCourses/C_Cpp"
 import Java from "../../Data/ContentsOfCourses/Java"
 import Html_Css from "../../Data/ContentsOfCourses/Html_Css"
@@ -15,20 +15,20 @@ export default function Courses() {
     let { url } = useRouteMatch()
     const list = CoursesSideBarList.map(listItem =>
         <NavLink
-            activeClassName={styles.sideBarCoursesActive}
-            className={styles.sideBarCourses}
+            activeClassName="sideBarCoursesActive"
+            className="sideBarCourses"
             key={listItem.href}
             to={`${url}/${listItem.href}`} >
             {listItem.name}
         </NavLink>
     )
     return (
-        <div className={styles.courses}>
-            <div className={styles.coursesParent}>
+        <div className="courses">
+            <div className="coursesParent">
                 <div>
                     <SideBar list={list} />
                 </div>
-                <main className={styles.switchTag}>
+                <main className="switchTag">
                     <Switch>
                         <Route exact path="/courses" component={C_Cpp} />
                         <Route exact path={`${url}/c_cpp`} component={C_Cpp} />
@@ -40,7 +40,6 @@ export default function Courses() {
                 </main>
                 <Add />
             </div>
-            <ToTop />
         </div>
     )
 }

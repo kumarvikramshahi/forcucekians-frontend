@@ -19,7 +19,7 @@ export default class DownBar extends React.Component {
                         Courses
                     </span>
                 </NavLink>
-                <NavLink activeClassName={styles.childDivActive} className={styles.childDiv} to="/materials">
+                <a target="_blank" className={styles.childDiv} href="https://free-for.dev/#/" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 22v-16h16v7.543c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362zm18-7.614v-10.386h-20v20h10.189c3.163 0 9.811-7.223 9.811-9.614zm-10 1.614h-5v-1h5v1zm5-4h-10v1h10v-1zm0-3h-10v1h10v-1zm3-6h-19v19h-1v-20h20v1zm-2-2h-19v19h-1v-20h20v1z" />
                     </svg>
                     <span className={styles.childSpan}>
@@ -31,7 +31,7 @@ export default class DownBar extends React.Component {
                     <span className={styles.childSpanMobile}>
                         Materials
                     </span>
-                </NavLink>
+                </a>
                 <NavLink exact activeClassName={styles.childDivActive} className={styles.childDiv} to="/">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 13v10h-6v-6h-6v6h-6v-10h-3l12-12 12 12h-3zm-1-5.907v-5.093h-3v2.093l3 3z" />
                     </svg>

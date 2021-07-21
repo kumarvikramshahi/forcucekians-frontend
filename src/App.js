@@ -1,15 +1,22 @@
 import React from "react"
-import Logo from "./components/AppComponents/Logo"
+import Header from "./components/AppComponents/header"
 import Main from "./components/AppComponents/Main"
 import Footer from "./components/AppComponents/footer"
-import "./index.css"
+import ToTop from "./components/AppComponents/ToTop"
+import "./App.css"
 
-export default function App(){
+window.$SERVER_URI = 'https://forcucekians.herokuapp.com';
+window.$TOKEN = localStorage.getItem("bhaagB**");
+window.$USER_ID = localStorage.getItem("userId");
+window.$IsAuth = window.$TOKEN && window.$USER_ID;
+
+export default function App() {
     return (
         <div>
-            <Logo />
+            <Header />
             <Main />
             <Footer />
+            <ToTop />
         </div>
     )
 }

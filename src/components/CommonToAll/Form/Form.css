@@ -1,0 +1,38 @@
+.form {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.295);
+    margin: auto;
+}
+
+@media only screen and (min-width: 500.5px) {
+    .form {
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 500.5px) {
+    .form {
+        width: 95%;
+    }
+}
+
+.form>div {
+    padding: 25px 40px;
+}
+
+.formHeading {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.forgotPassword {
+    font-size: 80%;
+}
+
+.validationError {
+    background-color: #fad1d8;
+    color: rgb(180, 33, 33);
+    border: 1px solid #ea8a9a;
+    width: 90%;
+    padding: 4px 12px;
+    margin-bottom: 5%;
+}

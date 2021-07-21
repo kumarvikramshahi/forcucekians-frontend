@@ -1,11 +1,10 @@
 import React from "react"
 import { Switch, Route, NavLink, useRouteMatch } from "react-router-dom"
+import "./Competitive.css"
 import SideBar from "../../CommonToAll/SideBar"
 import CompetitiveSideBarList from "../../Data/SideBarList/CompetitiveSideBarList"
 import Add from "../../CommonToAll/Add"
-import ToTop from "../../CommonToAll/ToTop"
 import Error from "../../CommonToAll/Error"
-import styles from "./Competitive.module.css"
 import FOSS from "../../Data/ContentsOfCompetitive/FOSS"
 import FossPrograms from "../../Data/ContentsOfCompetitive/FossPrograms"
 import SitesForFreeCourses from "../../Data/ContentsOfCompetitive/SitesForFreeCourses"
@@ -18,15 +17,15 @@ export default function Competitive() {
     const list = CompetitiveSideBarList.map(
         listItem =>
             <NavLink
-                activeClassName={styles.sideBarCompetitiveActive}
-                className={styles.sideBarCompetitive}
+                activeClassName="sideBarCompetitiveActive"
+                className="sideBarCompetitive"
                 key={listItem.path}
                 to={`${url}/${listItem.path}`} >
                 {listItem.name}
             </NavLink>)
     return (
-        <div className={styles.competitive}>
-            <div className={styles.competitiveParent}>
+        <div className="competitive">
+            <div className="competitiveParent">
                 <div>
                     <SideBar list={list} />
                 </div>
@@ -44,7 +43,6 @@ export default function Competitive() {
                 </main>
                 <Add />
             </div>
-            <ToTop />
         </div>
     )
 }

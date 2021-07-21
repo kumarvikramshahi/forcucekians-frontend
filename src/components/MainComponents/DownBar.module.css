@@ -1,53 +1,60 @@
-.containerDiv{
-    box-sizing:"bordr-box";
-    width:100%;
+.containerDiv {
+    box-sizing: border-box;
+    width: 100%;
     display: grid;
-    grid-template-columns:21.25% 21.25% 15% 21.25% 21.25%;
+    grid-template-columns: 21.25% 21.25% 15% 21.25% 21.25%;
     position: fixed;
     bottom: 0px;
-    text-align:center;
-    z-index:2;
-    background-color:white;
+    text-align: center;
+    z-index: 2;
+    background-color: white;
+    font-size: 90%;
 }
-.childDiv{
-    cursor:pointer;
-    background: linear-gradient(18deg,#9e9e9e8e, rgba(255, 192, 203, 0.322));
-    color:black;
-    padding:13px 0px;
+
+.childDiv {
+    cursor: pointer;
+    background: linear-gradient(18deg, #9e9e9e8e, rgba(255, 192, 203, 0.322));
+    color: black;
+    padding: 13px 0px;
     text-decoration: none;
 }
-.childDiv:hover{
-    background: linear-gradient(18deg,#e9e9e9, rgba(255, 192, 203, 0.322));
+
+.childDiv:hover {
+    background: linear-gradient(18deg, #e9e9e9, rgba(255, 192, 203, 0.322));
 }
-.childDivActive{
+
+.childDivActive {
     background: #e7e7e7de;
     border-bottom: 3px solid rgb(127, 141, 219);
 }
-.childSpan{
+
+.childSpan {
     font-weight: 900;
 }
-.childSpanMobile{
+
+.childSpanMobile {
     display: none;
 }
+
 @media only screen and (max-width: 830.5px) {
-    .containerDiv{
-        box-sizing:"bordr-box";
-        width:100%;
+    .containerDiv {
+        box-sizing: border-box;
+        width: 100%;
         display: grid;
-        grid-template-columns:20% 20% 20% 20% 20%;
+        grid-template-columns: 20% 20% 20% 20% 20%;
         position: fixed;
         bottom: 0px;
-        text-align:center;
-        z-index:2;
-        background-color:white;
+        text-align: center;
+        z-index: 2;
+        background-color: white;
     }
-    .childSpan{
+    .childSpan {
         display: none;
     }
-    .childDiv{
+    .childDiv {
         padding: 8px 2px 2px 2px;
     }
-    .childSpanMobile{
+    .childSpanMobile {
         display: block;
         font-size: 70%;
     }

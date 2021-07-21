@@ -1,41 +1,46 @@
-.nav{
-  position: -webkit-sticky;
-  position: sticky;
-  top: 1px;
+.nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1px;
 }
-.sideBarPC{
+
+.sideBarPC {
     background-color: rgba(162, 223, 238, 0.8);
     height: 92.2vh;
     overflow: auto;
 }
-@media only screen and (min-width: 800.5px){
-.nav{
-    scrollbar-color:  rgba(22, 144, 165, 0.664) rgba(216, 134, 196, 0.63);
+
+@media only screen and (min-width: 800.5px) {
+    .nav {
+        scrollbar-color: rgba(22, 144, 165, 0.664) rgba(216, 134, 196, 0.63);
+    }
+    .nav::-webkit-scrollbar {
+        width: 5px;
+    }
+    .nav::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+    .nav::-webkit-scrollbar-thumb {
+        background: rgba(252, 51, 51, 0.507);
+        border-radius: 10px;
+    }
+    .nav::-webkit-scrollbar-thumb:hover {
+        background: #b30000;
+    }
 }
-.nav::-webkit-scrollbar {
-    width: 5px;
-}
-.nav::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-}
-.nav::-webkit-scrollbar-thumb {
-    background: rgba(252, 51, 51, 0.507); 
-    border-radius: 10px;
-}
-.nav::-webkit-scrollbar-thumb:hover {
-    background: #b30000; 
-}
-}
-.toggleButton{
+
+.toggleButton {
     display: none;
 }
-.svg{
+
+.svg {
     margin: 5px 0px 0px 5px;
     width: 35px;
     height: 35px;
 }
-.svg2nd{
+
+.svg2nd {
     height: 40px;
     width: 40px;
     position: fixed;
@@ -44,34 +49,31 @@
     transform: translateX(170%);
     -ms-transform: translateX(170%);
 }
-@media only screen and (max-width: 800.5px){
-    .sideBarPC{
+
+@media only screen and (max-width: 800.5px) {
+    .sideBarPC {
         display: none;
     }
-    .toggleButton{
+    .toggleButton {
         display: block;
     }
-    .sideBarMobileShow{
+    .sideBarMobileShow, .sideBarMobileHide {
         background-color: rgba(255, 255, 255, 0);
         width: 100%;
         z-index: 1;
         position: fixed;
         top: 0px;
         left: 0px;
+    }
+    .sideBarMobileShow {
         transform: translateX(0%);
         transition: transform 0.2s ease-out;
     }
-    .sideBarMobileHide{
-        background-color: rgba(255, 255, 255, 0);
-        width: 100%;
-        z-index: 1;
-        position: fixed;
-        top: 0px;
-        left: 0px;
+    .sideBarMobileHide {
         transform: translateX(-110%);
         transition: transform 0.15s ease-in;
     }
-    .sideBarMobile{
+    .sideBarMobile {
         background-color: rgba(162, 223, 238, 0.97);
         max-width: 12rem;
         height: 94vh;

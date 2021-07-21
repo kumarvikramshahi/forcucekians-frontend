@@ -1,55 +1,69 @@
-.h1{
+.h1 {
     text-align: center;
     color: #43646b;
     font-size: 180%;
 }
-.h2{
+
+.h2 {
     color: green;
 }
-.a{
+
+.a {
     color: #541a8bd3;
 }
-@media only screen and (max-width: 800.5px){
-    .divContainer{
+
+@media only screen and (max-width: 800.5px) {
+    .divContainer {
         padding: 0px 8px;
     }
 }
-@media only screen and (min-width: 800.5px){
-    .divContainer{
+
+@media only screen and (min-width: 800.5px) {
+    .divContainer {
         padding: 0px 2%;
     }
 }
-.listCardContainer{
+
+.listCardContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
-.listCard{
+
+.listCard {
     margin: 3%;
     padding: 1px 8px;
-    background-color: rgba(238, 147, 144, 0.253);
-    border-radius: 10px;
-    box-shadow: 10px 10px 8px 0 rgba(0, 0, 0, 0.25), -6px -6px 6px 0 rgba(165, 225, 230, 0.664);
+    background-color: rgba(238, 147, 144, 0.25);
+    backdrop-filter: blur( 6px);
+    -webkit-backdrop-filter: blur( 6px);
+    border-radius: 5px;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
 }
-.i{
+
+.i {
     color: rgba(0, 0, 0, 0.7);
 }
+
 tr:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.253);
 }
+
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
-@media only screen and (max-width: 459.5px){
-    td, th{
+
+@media only screen and (max-width: 459.5px) {
+    td, th {
         word-break: break-all;
     }
 }
-.activeNavLink{
+
+.activeNavLink {
     color: green;
     text-decoration: none;
 }
-.navLink{
+
+.navLink {
     color: grey;
 }
