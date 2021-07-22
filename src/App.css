@@ -18,11 +18,11 @@ body {
   font-size: 120%;
   line-height: 1.5;
   width: 100%;
-  background-color: #bddede;
 }
 
 @media only screen and (min-width: 1250.5px) {
   body {
+    background-color: #bddede;
     background-image: url('./assets/reading-side.svg'), url('./assets/reading-right.svg');
     background-repeat: no-repeat, no-repeat;
     background-attachment: fixed, fixed;
@@ -34,11 +34,7 @@ body {
 @media only screen and (max-width: 1250.5px) {
   body {
     /* In case linear gradient unsupported */
-    background: #90F7EC;
-    /* Actual styling for supported browsers */
-    background: linear-gradient(90deg, #90F7EC, #48ebdb93 );
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(90deg, #90F7EC, #48EBDA );
+    background: #ffffff6c;
   }
 }
 
