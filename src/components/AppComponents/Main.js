@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { Switch, Route, Redirect } from "react-router-dom"
 import RightNavBar from "../MainComponents/rightNavBar/rightNavBar"
-import DownBar from "../MainComponents/DownBar"
+import DownBar from "../MainComponents/DownBar/DownBar"
 import Error from "../CommonToAll/Error"
 import Home from "../MainComponents/Home/Home"
 import Courses from "../MainComponents/Courses/Courses"
@@ -21,7 +21,7 @@ export default function Main() {
   const setAutoLogOut = (remainingMilliSec) => {
     setTimeout(() => {
       logOut();
-      window.location.href = "/"
+      window.location.replace("/")
     }, remainingMilliSec)
   }
 

@@ -39,8 +39,8 @@
     text-align: right;
     padding: 6px 8px;
     text-decoration: none;
-    background-color: #a0c5dd;
-    border: 1px solid rgba(255, 255, 255, 0.534);
+    background-color: #a0c5dd3a;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px 0px 15px 15px;
     margin-top: 7px;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.363);

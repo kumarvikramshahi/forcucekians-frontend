@@ -33,16 +33,16 @@ body {
 
 @media only screen and (max-width: 1250.5px) {
   body {
-    background-color: #bddede;
+    /* In case linear gradient unsupported */
+    background-color: #90F7EC;
+    /* Actual styling for supported browsers */
+    background: linear-gradient(90deg, #90F7EC, #48ebdb93 );
     /* fallback for old browsers */
-    background: linear-gradient(60deg, #4ca1af, #d9d2d3, #66b6c281, #c2baba, #6fadb8, #c4e0e5);
-    background: -webkit-linear-gradient(60deg, #4ca1af, #d9d2d3, #66b6c281, #eaeaea, #c4e0e5);
-    background-attachment: fixed;
-    background-repeat: no-repeat, no-repeat;
+    background: -webkit-linear-gradient(90deg, #90F7EC, #48EBDA );
   }
 }
 
-/* These are common css styles that is used in many components. */
+/* Below are common css styles, used in many components. */
 
 .glassmorphism {
   backdrop-filter: blur( 5px);

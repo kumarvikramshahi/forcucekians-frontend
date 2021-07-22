@@ -23,7 +23,8 @@
     padding: 8px 6px 8px 12px;
     text-decoration: none;
     font-weight: 600;
-    color: rgb(22, 22, 22);
+    color: rgb(0, 0, 0);
+    z-index: 2;
 }
 
 .sideBarCompetitive:hover {

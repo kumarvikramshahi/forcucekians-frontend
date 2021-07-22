@@ -24,7 +24,7 @@ export default function RightNavBar() {
             <>
                 <a
                     onClick={logOutButton}
-                    className="navlink"
+                    className="navlink glassmorphism"
                     href={href.pathname}
                 >
                     LogOut
@@ -35,14 +35,14 @@ export default function RightNavBar() {
             <>
                 <NavLink
                     activeClassName="navlinkActive"
-                    className="navlink"
+                    className="navlink glassmorphism"
                     to="/user/login"
                 >
                     LogIn
                 </NavLink>
                 <NavLink
                     activeClassName="navlinkActive"
-                    className="navlink"
+                    className="navlink glassmorphism"
                     to="/user/signup"
                 >
                     SignUp
@@ -53,14 +53,14 @@ export default function RightNavBar() {
         <>
             <NavLink
                 activeClassName="navlinkActive"
-                className="navlink"
+                className="navlink glassmorphism"
                 to="/user/upload"
             >
                 Upload
             </NavLink>
             <NavLink
                 activeClassName="navlinkActive"
-                className="navlink"
+                className="navlink glassmorphism"
                 to="/user/profilePage"
             >
                 Profile

@@ -57,6 +57,7 @@ export default class Form extends Component {
                 ...this.state.uploadForm
             })
         }
+
         fetch(window.$SERVER_URI + this.props.uri, options)
             .then(resp => {
                 if (resp.status === 200 || resp.status === 201) {

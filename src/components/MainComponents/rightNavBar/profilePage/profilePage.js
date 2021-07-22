@@ -99,6 +99,9 @@ export default function ProfilePage() {
             <div> {isLoading ? <Loading /> : null} </div>
             <h2 className="h2"> Your contributions.. </h2>
             <hr />
+            <div className={authMessage.length ? "authMessage glassmorphism" : null}>
+                {authMessage}
+            </div>
             <div className="divContainer">
                 {
                     booksList.map(listItem => {
@@ -186,9 +189,6 @@ export default function ProfilePage() {
                         )
                     })
                 }
-            </div>
-            <div className={authMessage.length ? "authMessage glassmorphism" : null}>
-                {authMessage}
             </div>
         </div>
     )

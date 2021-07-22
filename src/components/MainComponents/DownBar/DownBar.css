@@ -7,16 +7,16 @@
     bottom: 0px;
     text-align: center;
     z-index: 2;
-    background-color: white;
     font-size: 90%;
 }
 
 .childDiv {
     cursor: pointer;
-    background: linear-gradient(18deg, #9e9e9e8e, rgba(255, 192, 203, 0.322));
+    background: linear-gradient(18deg, #ffffff8e, rgba(255, 192, 203, 0.25));
     color: black;
     padding: 13px 0px;
     text-decoration: none;
+    border-radius: 20px;
 }
 
 .childDiv:hover {
@@ -38,15 +38,7 @@
 
 @media only screen and (max-width: 830.5px) {
     .containerDiv {
-        box-sizing: border-box;
-        width: 100%;
-        display: grid;
         grid-template-columns: 20% 20% 20% 20% 20%;
-        position: fixed;
-        bottom: 0px;
-        text-align: center;
-        z-index: 2;
-        background-color: white;
     }
     .childSpan {
         display: none;

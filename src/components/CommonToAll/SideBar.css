@@ -60,7 +60,6 @@
     .sideBarMobileShow, .sideBarMobileHide {
         background-color: rgba(255, 255, 255, 0);
         width: 100%;
-        z-index: 1;
         position: fixed;
         top: 0px;
         left: 0px;
@@ -74,10 +73,11 @@
         transition: transform 0.15s ease-in;
     }
     .sideBarMobile {
-        background-color: rgba(162, 223, 238, 0.97);
+        background-color: rgba(209, 222, 224, 0.25);
         max-width: 12rem;
         height: 94vh;
         overflow: auto;
         box-shadow: 80px 0px 100px rgba(0, 0, 0, 0.322);
+        z-index: 2;
     }
 }

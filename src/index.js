@@ -5,7 +5,7 @@ import App from "./App"
 
 ReactDOM.render(
   //make sure to avoid use of HashRouter, using it will disturb different functionalty. 
-  <BrowserRouter>
+  <BrowserRouter basename="/">
     <App />
   </BrowserRouter>
   , document.getElementById("root")
