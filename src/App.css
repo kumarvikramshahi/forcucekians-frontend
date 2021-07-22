@@ -34,7 +34,7 @@ body {
 @media only screen and (max-width: 1250.5px) {
   body {
     /* In case linear gradient unsupported */
-    background-color: #90F7EC;
+    background: #90F7EC;
     /* Actual styling for supported browsers */
     background: linear-gradient(90deg, #90F7EC, #48ebdb93 );
     /* fallback for old browsers */
