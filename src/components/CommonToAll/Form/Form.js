@@ -12,14 +12,17 @@ export default class Form extends Component {
             uploadForm: { ...this.props.form },
             message_201: "",
             errorMsg: "", // compile/runtime error message
-            isError: false,
+            isError: false,  // if error exist or not
             isUploading: false,
-            token: "",
-            isAuth: true
+            token: "", // Jwt token
+            isAuth: true,  // if authenticated or not
+            // isEmailError: false  // if email format wrong
         }
         this.inputHandler = this.inputHandler.bind(this)
         this.formHandeler = this.formHandeler.bind(this)
+        // this.emailValidator = this.emailValidator.bind(this)
     }
+
     inputHandler(event) {
         const updateForm = { ...this.state.uploadForm }
         const property = event.target.name
@@ -28,6 +31,7 @@ export default class Form extends Component {
             uploadForm: updateForm
         })
     }
+
     componentDidMount() {
         this.setState({ token: localStorage.getItem("bhaagB**") })
 
@@ -39,6 +43,23 @@ export default class Form extends Component {
             })
         }
     }
+
+    // apply this only after adding "ug.cusat.ac.in" validation support in backend...
+    // after uncommneting this also uncommnet onchange in input tag.
+    // emailValidator(event) {
+    //     if (this.props.isSignUp) {
+    //         const emailDomain = event.target.value.split("@")[1] === "ug.cusat.ac.in";
+    //         if (!emailDomain) {
+    //             this.setState({ isEmailError: true })
+    // make sure to use 'isEmailError' in Button
+    //             return this.setState({ errorMsg: "please enter your cusat mail id.." });
+    //         } else {
+    //             this.setState({ isEmailError: false })
+    //             return this.setState({ errorMsg: "" });
+    //         }
+    //     }
+    // }
+
     formHandeler(event) {
         event.preventDefault()
 
@@ -104,6 +125,7 @@ export default class Form extends Component {
                 })
             })
     }
+
     render() {
         return (
             <div>
@@ -137,6 +159,7 @@ export default class Form extends Component {
                                         maxLength={item.maxLength}
                                         minLength={item.minLength}
                                         onChange={this.inputHandler}
+                                    // onChange={item.name === "email" ? this.emailValidator : null}
                                     />
                                 )
                             })

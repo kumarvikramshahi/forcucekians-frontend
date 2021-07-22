@@ -43,6 +43,7 @@ export default function LogIn(props) {
                 inputTag={input}
                 buttonTag={button}
                 isAuthPage={true}
+                isSignUp={true}
                 previousLocation={props.previousLocation}
             />
         </div>
