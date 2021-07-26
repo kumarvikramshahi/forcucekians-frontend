@@ -1,6 +1,5 @@
 .input {
     display: block;
-    text-transform: capitalize;
     height: 30px;
     border-radius: 7px;
     border: 1px solid black;
@@ -11,10 +10,6 @@
     font-size: 1rem;
     color: rgb(66, 3, 66);
     background-color: rgba(0, 0, 0, 0);
-}
-
-.input[type="url"] {
-    text-transform: none;
 }
 
 .input[type="search"] {
