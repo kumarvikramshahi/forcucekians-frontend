@@ -45,3 +45,7 @@
 .fileUrl {
     word-wrap: break-word;
 }
+
+.cardProperty{
+    color: gray;
+}

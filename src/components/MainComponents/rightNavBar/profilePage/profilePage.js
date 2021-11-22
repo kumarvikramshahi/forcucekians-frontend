@@ -3,12 +3,14 @@ import "./profilePage.css"
 import Loading from "../../../CommonToAll/Loading/loading"
 import PopupMessage from "../../../CommonToAll/popupMessage/popupMessage"
 import Button from "../../../CommonToAll/Button/Button"
+import { Link } from "react-router-dom"
+import Searchbar from "../../../CommonToAll/searchBar"
 
 export default function ProfilePage() {
     const [isLoading, setIsLoading] = useState(false);
-    const [booksList, setBooksList] = useState([{ name: "Your contributions", fileUrl: "" }]);
-    const [notesList, setNotesList] = useState([{ name: "will be", fileUrl: "" }]);
-    const [questionPaperList, setQuestionPaperList] = useState([{ name: "shown here.", fileUrl: "" }]);
+    const [booksList, setBooksList] = useState([]);
+    const [notesList, setNotesList] = useState([]);
+    const [questionPaperList, setQuestionPaperList] = useState([]);
     const [error, setError] = useState("");
     const [authMessage, setAuthMessage] = useState("");
     const [successMsg, setSuccessMsg] = useState("");
@@ -97,99 +99,113 @@ export default function ProfilePage() {
                 {successMsg}
             </PopupMessage>
             <div> {isLoading ? <Loading /> : null} </div>
-            <h2 className="h2"> Your contributions.. </h2>
-            <hr />
-            <div className={authMessage.length ? "authMessage glassmorphism" : null}>
-                {authMessage}
-            </div>
-            <div className="divContainer">
-                {
-                    booksList.map(listItem => {
-                        return (
-                            <div
-                                className="divContributionList card glassmorphism"
-                                title={listItem.author}
-                                key={listItem.fileUrl}
-                            >
-                                Name: {listItem.name} <br />
-                                Author: {listItem.author} <br />
-                                Genre: {listItem.genre} <br />
-                                fileUrl:
-                                <a href={listItem.fileUrl} target="_blank"
-                                    className="fileUrl"
-                                    rel="noreferrer noopener"
-                                >
-                                    {listItem.fileUrl}
-                                </a> <br />
-                                <br />
-                                <Button
-                                    type="button"
-                                    name={listItem._id}
-                                    value="Delete"
-                                    onClick={deleteBook}
-                                />
-                            </div>
-                        )
-                    })
-                }
-                {
-                    notesList.map(listItem => {
-                        return (
-                            <div
-                                className="divContributionList card glassmorphism"
-                                title={listItem.shortName}
-                                key={listItem.fileUrl}
-                            >
-                                Name: {listItem.name} <br />
-                                Short name: {listItem.shortName} <br />
-                                fileUrl:
-                                <a href={listItem.fileUrl} target="_blank"
-                                    className="fileUrl"
-                                    rel="noreferrer noopener"
-                                >
-                                    {listItem.fileUrl}
-                                </a> <br /> <br />
-                                <br />
-                                <Button
-                                    type="button"
-                                    name={listItem._id}
-                                    value="Delete"
-                                    onClick={deleteNotes}
-                                />
-                            </div>
-                        )
-                    })
-                }
-                {
-                    questionPaperList.map(listItem => {
-                        return (
-                            <div
-                                className="divContributionList card glassmorphism"
-                                title={listItem.subject}
-                                key={listItem.fileUrl}
-                            >
-                                Name: {listItem.name} <br />
-                                Subject: {listItem.subject} <br />
-                                Exam type: {listItem.examType} <br />
-                                fileUrl:
-                                <a href={listItem.fileUrl} target="_blank"
-                                    className="fileUrl"
-                                    rel="noreferrer noopener"
-                                >
-                                    {listItem.fileUrl}
-                                </a> <br /><br />
-                                <br />
-                                <Button
-                                    type="button"
-                                    name={listItem._id}
-                                    value="Delete"
-                                    onClick={deleteQuestionPaper}
-                                />
-                            </div>
-                        )
-                    })
-                }
-            </div>
+
+            {window.$IsAuth ? (
+                <>
+                    <h2 className="h2"> Your contributions.. </h2>
+                    <hr />
+                    <div className="divContainer">
+                        {
+                            booksList.map(listItem => {
+                                return (
+                                    <div
+                                        className="divContributionList card glassmorphism"
+                                        title={listItem.author}
+                                        key={listItem.fileUrl}
+                                    >
+                                        <span className="cardProperty">Name: </span>
+                                        {listItem.name} <br />
+                                        <span className="cardProperty">Author: </span>
+                                        {listItem.author} <br />
+                                        <span className="cardProperty">Genre: </span>
+                                        {listItem.genre} <br />
+                                        <span className="cardProperty">fileUrl: </span>
+                                        <a href={listItem.fileUrl} target="_blank"
+                                            className="fileUrl"
+                                            rel="noreferrer noopener"
+                                        >
+                                            {listItem.fileUrl}
+                                        </a> <br />
+                                        <br />
+                                        <Button
+                                            type="button"
+                                            name={listItem._id}
+                                            value="Delete"
+                                            onClick={deleteBook}
+                                        />
+                                    </div>
+                                )
+                            })
+                        }
+                        {
+                            notesList.map(listItem => {
+                                return (
+                                    <div
+                                        className="divContributionList card glassmorphism"
+                                        title={listItem.shortName}
+                                        key={listItem.fileUrl}
+                                    >
+                                        <span className="cardProperty">Name: </span>
+                                        {listItem.name} <br />
+                                        <span className="cardProperty">Short name: </span>
+                                        {listItem.shortName} <br />
+                                        <span className="cardProperty">fileUrl: </span>
+                                        <a href={listItem.fileUrl} target="_blank"
+                                            className="fileUrl"
+                                            rel="noreferrer noopener"
+                                        >
+                                            {" "}{listItem.fileUrl}
+                                        </a> <br /> <br />
+                                        <br />
+                                        <Button
+                                            type="button"
+                                            name={listItem._id}
+                                            value="Delete"
+                                            onClick={deleteNotes}
+                                        />
+                                    </div>
+                                )
+                            })
+                        }
+                        {
+                            questionPaperList.map(listItem => {
+                                return (
+                                    <div
+                                        className="divContributionList card glassmorphism"
+                                        title={listItem.subject}
+                                        key={listItem.fileUrl}
+                                    >
+                                        <span className="cardProperty">Name: </span>
+                                        {listItem.name} <br />
+                                        <span className="cardProperty">Subject: </span>
+                                        {listItem.subject} <br />
+                                        <span className="cardProperty">Exam type: </span>
+                                        {listItem.examType} <br />
+                                        <span className="cardProperty">fileUrl: </span>
+                                        <a href={listItem.fileUrl} target="_blank"
+                                            className="fileUrl"
+                                            rel="noreferrer noopener"
+                                        >
+                                            {listItem.fileUrl}
+                                        </a> <br /><br />
+                                        <br />
+                                        <Button
+                                            type="button"
+                                            name={listItem._id}
+                                            value="Delete"
+                                            onClick={deleteQuestionPaper}
+                                        />
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                </>
+            ) :
+                <Link to="/user/login" style={{ textDecoration: "none" }}>
+                    <div className="authMessage glassmorphism"> {authMessage} </div>
+                </Link>
+            }
         </div>
     )
 }
