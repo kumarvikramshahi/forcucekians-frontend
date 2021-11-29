@@ -22,7 +22,7 @@ body {
 
 @media only screen and (min-width: 1250.5px) {
   body {
-    background-color: #bddede;
+    background-color: #f5f7f8;
     background-image: url('./assets/reading-side.svg'), url('./assets/reading-right.svg');
     background-repeat: no-repeat, no-repeat;
     background-attachment: fixed, fixed;
@@ -47,7 +47,7 @@ body {
 
 .card {
   border-radius: 20px;
-  background: rgba( 255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+  background: rgb(255, 255, 255);
+  box-shadow: 10px 38px 32px 0 rgba(31, 38, 135, 0.185), -10px -1px 32px 0 rgba(31, 38, 135, 0.185);
   scrollbar-width: thin;
 }
