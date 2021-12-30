@@ -11,6 +11,7 @@ import LogIn from "../MainComponents/rightNavBar/auth/LogIn"
 import SignUp from "../MainComponents/rightNavBar/auth/signUp"
 import ProfilePage from "../MainComponents/rightNavBar/profilePage/profilePage"
 import Upload from "../MainComponents/rightNavBar/uploadPage/upload"
+import OtpGenerator from "../MainComponents/rightNavBar/Generator/generator"
 
 export default function Main() {
   const logOut = () => {
@@ -56,6 +57,11 @@ export default function Main() {
         <Route path="/user/signup">
           {window.$IsAuth ? <Redirect to="/" /> : <SignUp previousLocation="/user/profilePage" />}
         </Route>
+        {localStorage.getItem("userId") === '60fa7604e9c10e00041d8396' ? (
+          <Route path="/user/generator">
+            <OtpGenerator />
+          </Route>
+        ) : null}
         <Route component={Error} />
       </Switch>
     </>

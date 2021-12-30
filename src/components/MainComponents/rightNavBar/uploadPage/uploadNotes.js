@@ -6,8 +6,8 @@ export default function UploadNotes() {
         subjectShortName: "",
         subjectFullName: "",
         moduleNum: "",
-        fileUrl: "",
-        notesBy: ""
+        notesBy: "",
+        notesFile: "",
     }
     const input = [
         {
@@ -37,11 +37,10 @@ export default function UploadNotes() {
             maxLength: 10
         },
         {
-            type: "url",
-            name: "fileUrl",
-            placeholder: "https://drive/notes/",
+            type: "file",
+            name: "notesFile",
             required: true,
-            label: "File URL"
+            label: "Upload Notes"
         },
         {
             type: "text",
@@ -62,6 +61,7 @@ export default function UploadNotes() {
                 material="Notes"
                 uri="/user/uploadNotes"
                 form={formNames}
+                isFormData={true}
                 inputTag={input}
                 buttonTag={button}
             />

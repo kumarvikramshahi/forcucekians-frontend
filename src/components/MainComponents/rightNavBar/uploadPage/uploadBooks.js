@@ -6,7 +6,7 @@ export default function UploadBooks() {
         bookName: "",
         author: "",
         genre: "",
-        fileUrl: ""
+        bookFile: ""
     }
     const input = [
         {
@@ -36,11 +36,10 @@ export default function UploadBooks() {
             minLength: 3
         },
         {
-            type: "url",
-            name: "fileUrl",
-            placeholder: "https://drive/book/HalfGirlfriend",
+            type: "file",
+            name: "bookFile",
             required: true,
-            label: "File/Book URL"
+            label: "Upload Book"
         }
     ]
     const button = [{
@@ -53,6 +52,7 @@ export default function UploadBooks() {
                 material="Book"
                 uri="/user/uploadBooks"
                 form={formNames}
+                isFormData = {true}
                 inputTag={input}
                 buttonTag={button}
             />

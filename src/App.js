@@ -5,7 +5,8 @@ import Footer from "./components/AppComponents/footer"
 import ToTop from "./components/AppComponents/ToTop"
 import "./App.css"
 
-window.$SERVER_URI = 'https://forcucekians.herokuapp.com';
+// window.$SERVER_URI = 'https://forcucekians.herokuapp.com';
+window.$SERVER_URI = 'http://localhost:8080';
 window.$TOKEN = localStorage.getItem("bhaagB**");
 window.$USER_ID = localStorage.getItem("userId");
 window.$IsAuth = window.$TOKEN && window.$USER_ID;

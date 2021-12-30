@@ -6,7 +6,7 @@ export default function UploadQuestionPaper() {
         questionPaperName: "",
         subjectFullName: "",
         examType: "",
-        fileUrl: ""
+        questionPaperFile: ""
     }
     const input = [
         {
@@ -37,11 +37,10 @@ export default function UploadQuestionPaper() {
             minLength: 5
         },
         {
-            type: "url",
-            name: "fileUrl",
-            placeholder: "https://drive/questionPaper",
+            type: "file",
+            name: "questionPaperFile",
             required: true,
-            label: "File URL"
+            label: "Question Paper "
         }
     ]
     const button = [{
@@ -54,6 +53,7 @@ export default function UploadQuestionPaper() {
                 material="Question-Paper"
                 uri="/user/uploadQuestionPaper"
                 form={formNames}
+                isFormData={true}
                 inputTag={input}
                 buttonTag={button}
             />

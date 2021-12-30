@@ -15,7 +15,8 @@ export default class Form extends Component {
             isError: false,  // if error exist or not
             isUploading: false,
             token: "", // Jwt token
-            isAuth: true,  // if authenticated or not
+            isAuth: true,  // if authenticated or not,
+            validationError: ''
             // isEmailError: false  // if email format wrong
         }
         this.inputHandler = this.inputHandler.bind(this)
@@ -26,7 +27,8 @@ export default class Form extends Component {
     inputHandler(event) {
         const updateForm = { ...this.state.uploadForm }
         const property = event.target.name
-        updateForm[property] = event.target.value
+        if (event.target.type === "file") updateForm[property] = event.target.files[0];
+        else updateForm[property] = event.target.value;
         this.setState({
             uploadForm: updateForm
         })
@@ -68,17 +70,44 @@ export default class Form extends Component {
         }
 
         // For Logged In users
-        this.setState({ isUploading: true })
         this.setState({ errorMsg: "" })
+
+        // File Validation check
+        const questionPaperFileExe = this.state.uploadForm?.questionPaperFile ? this.state.uploadForm?.questionPaperFile?.name.split(".")[1] : null;
+        const bookFileExe = this.state.uploadForm?.bookFile ? this.state.uploadForm?.bookFile?.name.split(".")[1] : null;
+        const notesFileExe = this.state.uploadForm?.notesFile ? this.state.uploadForm?.notesFile?.name.split(".")[1] : null;
+
+        if (questionPaperFileExe === ".docx" || questionPaperFileExe === ".pdf" || questionPaperFileExe === ".xlsx" || questionPaperFileExe === ".pptx") {
+            return this.setState({ validationError: "Select PDF/Excel/PowerPoint/Docs file" })
+        }
+        if (bookFileExe === ".docx" || bookFileExe === ".pdf" || bookFileExe === ".xlsx" || bookFileExe === ".pptx") {
+            return this.setState({ validationError: "Select PDF/Excel/PowerPoint/Docs file" })
+        }
+        if (notesFileExe === ".docx" || notesFileExe === ".pdf" || notesFileExe === ".xlsx" || notesFileExe === ".pptx") {
+            return this.setState({ validationError: "Select PDF/Excel/PowerPoint/Docs file" })
+        }
+
+        // FormData
+        const formData = new FormData();
+        for (let item in this.state.uploadForm) {
+            if (this.state.uploadForm[item]) formData.append(item, this.state.uploadForm[item]);
+            else {
+                return this.setState({ validationError: "Please fill all required fields" });
+            }
+        }
 
         const options = {
             method: "POST",
-            headers: this.props.isAuthPage ? { 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + this.state.token },
-            body: JSON.stringify({
-                ...this.state.uploadForm
-            })
+            headers: this.props.isAuthPage ? { 'Content-Type': 'application/json' } : this.props.isFormData ? { 'Authorization': 'Bearer ' + this.state.token } : { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + this.state.token },
+            body: this.props.isFormData ? formData : JSON.stringify({ ...this.state.uploadForm })
         }
 
+        // body: JSON.stringify({
+        //     ...this.state.uploadForm
+        // })
+
+        // Sending request
+        this.setState({ isUploading: true })
         fetch(window.$SERVER_URI + this.props.uri, options)
             .then(resp => {
                 if (resp.status === 200 || resp.status === 201) {
@@ -113,9 +142,13 @@ export default class Form extends Component {
                 } else {
                     this.setState({ message_201: respData.message })
                     this.setState({ isUploading: false })
+                    for (let item in this.state.uploadForm) {
+                        this.state.uploadForm[item] = null;
+                    }
                     setTimeout(() => {
                         this.setState({ message_201: "" })
-                    }, 4000)
+                        window.location.reload(false)
+                    }, 2000)
                 }
             })
             .catch(err => {
@@ -146,6 +179,9 @@ export default class Form extends Component {
                                 this.state.errorMsg.length ? this.state.errorMsg : null
                             }
                         </div>
+                        <div className={this.state.validationError.length ? "validationError" : null}>
+                            {this.state.validationError ? this.state.validationError : null}
+                        </div>
                         {
                             this.props.inputTag.map(item => {
                                 return (
@@ -159,6 +195,7 @@ export default class Form extends Component {
                                         maxLength={item.maxLength}
                                         minLength={item.minLength}
                                         onChange={this.inputHandler}
+                                        accept=".docx,.pdf, .xlsx, .pptx"
                                     // onChange={item.name === "email" ? this.emailValidator : null}
                                     />
                                 )

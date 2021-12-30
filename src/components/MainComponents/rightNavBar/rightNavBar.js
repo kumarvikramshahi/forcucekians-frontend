@@ -65,6 +65,15 @@ export default function RightNavBar() {
             >
                 Profile
             </NavLink>
+            {localStorage.getItem("userId") === '60fa7604e9c10e00041d8396' ? (
+                <NavLink
+                    activeClassName="navlinkActive"
+                    className="navlink glassmorphism"
+                    to="/user/generator"
+                >
+                    Generator
+                </NavLink>
+            ) : null}
         </>
 
     return (
