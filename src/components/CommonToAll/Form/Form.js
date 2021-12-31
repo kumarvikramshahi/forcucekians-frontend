@@ -73,6 +73,11 @@ export default class Form extends Component {
         this.setState({ errorMsg: "" })
 
         // File Validation check
+        if (this.props.isSignUp && this.state.uploadForm.email?.split("@")[1] !== "ug.cusat.ac.in") {
+            this.setState({ validationError: "please Enter your CUSAT email Id" });
+            return;
+        }
+
         const questionPaperFileExe = this.state.uploadForm?.questionPaperFile ? this.state.uploadForm?.questionPaperFile?.name.split(".")[1] : null;
         const bookFileExe = this.state.uploadForm?.bookFile ? this.state.uploadForm?.bookFile?.name.split(".")[1] : null;
         const notesFileExe = this.state.uploadForm?.notesFile ? this.state.uploadForm?.notesFile?.name.split(".")[1] : null;
@@ -131,6 +136,7 @@ export default class Form extends Component {
                 if (this.props.isAuthPage) {
                     localStorage.setItem("bhaagB**", respData.token)
                     localStorage.setItem("userId", respData.userId)
+                    // localStorage.setItem("username", respData.name)
                     const remainingMilliseconds = (respData.expiresIn[0]) * 60 * 60 * 1000;
                     const expiryDate = new Date(
                         new Date().getTime() + remainingMilliseconds

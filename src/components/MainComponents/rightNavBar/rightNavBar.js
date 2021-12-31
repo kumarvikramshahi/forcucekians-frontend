@@ -75,6 +75,15 @@ export default function RightNavBar() {
                 </NavLink>
             ) : null}
         </>
+    // const avtar =
+    //     <>
+    //         <div className="namePlate">
+    //             <div className="avtar">
+    //                 {localStorage.getItem("username")}
+    //             </div>
+    //             <div style={{ fontWeight: "bolder", width:"20px",height:"20px",borderRadius:"50%",border:"1px solid black" }}>{localStorage.getItem("username")[0]}</div>
+    //         </div>
+    //     </>
 
     return (
         <div>
@@ -93,6 +102,7 @@ export default function RightNavBar() {
                 {rightNavBar}
             </div>
             <div className="navlinkContainerPC">
+                {/* {avtar} */}
                 {rightNavBar2}
                 {rightNavBar}
             </div>

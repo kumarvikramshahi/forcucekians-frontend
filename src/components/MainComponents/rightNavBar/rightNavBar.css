@@ -31,8 +31,14 @@
     }
 }
 
+.avtar{
+    font-weight: bolder;
+    margin: 8px 8px 20px 0px;
+}
+
 .navlink {
     display: block;
+    width: 70px;
     color: black;
     font-size: 1.2rem;
     font-weight: 600;
