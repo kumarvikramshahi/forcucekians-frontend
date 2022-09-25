@@ -54,6 +54,15 @@ const BlogsList=[
         href:"https://dev.to/emmaccen/how-to-create-a-glassmorphic-template-in-pure-html-css-3jo4",
         demoText:"What Is Glassmorphism? If you're hearing the term 'Glassmorpism' for the first time, well.... Tagged with css, html, ux, webdev",
         datePublished:"21-Dec-2020"
-    }
+    },
+    {
+        imageHref:"https://exceed-primary-production-main.s3.amazonaws.com/uploads/resource_course_pictures/targets/3150211/w550/uni-activity-free-getstartedwithjira-thumb.png",
+        name:"Getting started with Jira tutorial",
+        fname:"Jira",
+        href:"https://www.atlassian.com/software/jira/guides/getting-started/basics#step-1-create-a-project",
+        demoText:"Before you begin this tutorial, sign up for Jira Software for free. This guide will help you set up your first project.",
+        datePublished:"26-sept-2022"
+    },
+        
 ]
 export default BlogsList
