@@ -5,8 +5,10 @@ import Footer from "./components/AppComponents/footer"
 import ToTop from "./components/AppComponents/ToTop"
 import "./App.css"
 
+// can't use ENV varibles to store and use API LINK, JWT token & user ID etc
+// due to netlify subscription plan, to use ENV varibles in netlify we need paid plans
 if (process.env.NODE_ENV === "production")
-    window.$SERVER_URI = 'https://forcucekians.herokuapp.com';
+    window.$SERVER_URI = "https://giddy-colt-jeans.cyclic.app/";
 if (process.env.NODE_ENV === "development")
     window.$SERVER_URI = 'http://localhost:8080';
 
